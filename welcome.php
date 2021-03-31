@@ -16,6 +16,7 @@ if(isset($_SESSION['user_id'])){
     <title>Use Management</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="DataTables/datatables.css" type="text/css">
     <link rel="stylesheet" href="fontawesome/css/all.css" type="text/css">
     <link rel="stylesheet" href="js/datetimepicker/datetimepicker.css" type="text/css">
 </head>
@@ -63,7 +64,7 @@ if(isset($_SESSION['user_id'])){
                 <div class="card-body">
                     <a class="btn btn-sm btn-primary mb-2" href="index.php" style="float:right">Register New User</a>
                     <div class="table-responsive" id="otherUserInfoTable">
-                        <table class="table table-sm">
+                        <table class="table table-sm" id="otherUserInfoTableTable">
                             <thead>
                                 <tr>
                                     <th>Name</th>
@@ -86,6 +87,7 @@ if(isset($_SESSION['user_id'])){
 </body>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/datetimepicker/datetimepicker.js"></script>
+<script type="text/javascript" src="DataTables/datatables.js"></script>
 <script type="text/javascript" src="app/info.js"></script>
 <script>
     getInfo(<?php echo $user_id;?>);

@@ -31,6 +31,7 @@ function getInfo(id) {
                         "</tr>";
                     $('#otherUserInfo').append(temp);
                 }
+                $('#otherUserInfoTableTable').DataTable();
             }
         },
         error: function(result) {
